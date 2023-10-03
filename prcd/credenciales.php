@@ -1,3 +1,8 @@
+<html>
+    <header>
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    </header>
+
 <?php
 require('conn/qc.php');
 use PHPMailer\PHPMailer\PHPMailer;
@@ -54,21 +59,36 @@ if($no_resultados == 1){
         
             $mail->send();
 
-            if($mail->send){
-                echo'
+            if($mail->send()){
+                echo"
                 <script>
-                    alert("Se envío el correo");
+                    Swal.fire({
+                        icon: 'success',
+                        imageUrl: '../img/logo_debate.png',
+                        imageHeight: 200,
+                        title: 'Correo enviado',
+                        text: 'Se enviaron las credenciales a tu correo',
+                        confirmButtonColor: '#3085d6',
+                        footer: 'INJUVENTUD'
+                    }).then(function(){window.location='../index.html';});
                 </script>
-                ';
-                header("Location: ../index.html");
+                ";
+               
             }
             else{
-                echo'
+                echo"
                 <script>
-                    alert("No se envío el correo");
+                    Swal.fire({
+                        icon: 'error',
+                        imageUrl: '../img/logo_debate.png',
+                        imageHeight: 200,
+                        title: 'No se envió correo',
+                        text: 'Error',
+                        confirmButtonColor: '#3085d6',
+                        footer: 'INJUVENTUD'
+                    }).then(function(){window.location='../index.html';});
                 </script>
-                ';
-                header("Location: ../index.html");
+                ";
             }
 
         }catch (Exception $e) {
@@ -82,9 +102,11 @@ else{
     echo'
     <script>
     alert("No se envió correo");
-    </script>';
+    </>';
 
 }
 
 
 ?>
+
+</html>
