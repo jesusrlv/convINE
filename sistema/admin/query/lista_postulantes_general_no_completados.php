@@ -11,7 +11,7 @@ while($rowSQL = $resultadoSQL->fetch_assoc()){
     $resultadoContar = $conn->query($contador);
     $rowContar = $resultadoContar -> fetch_assoc();
     $numero = $rowContar['contar'];
-    if($numero<9){
+    if($numero<3){
     echo'
     <tr>
         <td>'.$x.'</td>
@@ -34,12 +34,12 @@ while($rowSQL = $resultadoSQL->fetch_assoc()){
             <span class="badge rounded-pill text-bg-danger">
             ';
         }
-        else if ($numero == 1 || $numero == 2 || $numero == 3 || $numero == 4 || $numero == 5 || $numero == 6 || $numero == 7 || $numero == 8){
+        else if ($numero == 1 || $numero == 2){
             echo'
             <span class="badge rounded-pill text-bg-warning">
             ';
         }
-        else if ($numero == 9){
+        else if ($numero == 3){
             echo'
             <span class="badge rounded-pill text-bg-primary">
             ';

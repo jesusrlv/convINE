@@ -17,7 +17,7 @@ include('query/name.php');
     <meta name="INJUVENTUD" content="Consejo Juvenil">
     <meta name="" content="">
     <link rel="icon" type="image/png" href="../../img/icon.ico" sizes="22x21">
-    <title>Perfil Admin | Consejo Juvenil</title>
+    <title>Perfil Admin | Debate 2023</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/album/">
 
@@ -147,12 +147,8 @@ include('query/name.php');
         <h2 class="fw-bold" style="color:#5a5557">Bienvenido</h2>
         <h2 class="fw-bold" style="color:#5a5557"><i class="bi bi-person-circle"></i></h2>
         <h2 class="fw-bold" style="color:#5a5557"><?php echo $nombre ?></h2>
-        <p class="lead text-dark mt-2">Sistema de postulación del INJUVENTUD para integrarse al Consejo Juvenil del Estado de Zacatecas en su edición 2023.</p>
-        <p>
-          <hr class="text-secondary">
-          <a href="#seccion_MX" class="btn btn-danger my-2"><i class="bi bi-flag-fill text-success"></i> Postulantes Mx</a>
-          <a href="#seccion_USA" class="btn btn-primary my-2"><i class="bi bi-flag-fill text-danger"></i> Postulantes USA</a>
-        </p>
+        <p class="lead text-dark mt-2">Sistema de registro para el Concurso Juvenil de Debate en su edición 2023.</p>
+       
       </div>
     </div>
   </section>
@@ -162,13 +158,14 @@ include('query/name.php');
     <nav class="navbar bg-body-tertiary">
       <form class="container-fluid justify-content-start">
         <a href="completados.php" class="btn btn-outline-success me-2" type="button"><i class="bi bi-check-circle-fill"></i> Completados</a>
-        <a href="no_completados.php" class="btn btn-sm btn-outline-danger" type="button"><i class="bi bi-x-circle-fill"></i> No completados</a>
+        <a href="no_completados.php" class="btn btn-sm btn-outline-danger me-2" type="button"><i class="bi bi-x-circle-fill"></i> No completados</a>
+        <a href="index_general.php" class="btn btn-sm btn-outline-primary" type="button"><i class="bi bi-card-list"></i> Lista general</a>
       </form>
     </nav>
       <div class="mb-4">
         <p><span id="seccion_MX"></span>
           <p class="h2">
-          <i class="bi bi-flag-fill text-success"></i> Postulantes Mx | 
+          <i class="bi bi-flag-fill text-success"></i> Postulantes | 
               <a href="#inicio">
                 <i class="bi bi-arrow-bar-up"></i>
               </a>
@@ -185,7 +182,6 @@ include('query/name.php');
               <th scope="col">Documento</th>
               <th scope="col">Descripción</th>
               <th scope="col">Link</th>
-              <th scope="col">Calificación</th>
             </tr>
           </thead>
           <tbody class="text-center">

@@ -91,15 +91,7 @@ $perfil = $_SESSION['perfil'];
         white-space: nowrap;
         -webkit-overflow-scrolling: touch;
       }
-      /* buttons hover */
-
-      /* #botonesFiles:hover {
-    
-        box-shadow: 0 10px 20px rgba(0,0,0,.1), 0 4px 8px rgba(0,0,0,.06);
-        transform: scale(1.03);
-        transition: width 0.8s, height 0.8s, transform 0.3s;
-        
-      } */
+      
       .card{
         box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
       }
@@ -137,9 +129,7 @@ $perfil = $_SESSION['perfil'];
 
 <main>
 
-  <!-- <section class="py-5 text-center container"> -->
   <section class="text-center container">
-    <!-- <div class="row py-lg-5"  style="background-image: url('../../img/logo_consejo_05.png')"> -->
     <div class="row py-lg-5"  style="background-image: url('../../assets/img/background.jpg');background-position: top;background-repeat: no-repeat;background-size: cover;width:100%;">
       <div class="col-lg-6 col-md-8 mx-auto rounded bg-light bg-opacity-75 p-2">
         <h1 class="fw-light"><img src="../../img/logo_debate.png" alt="" width="360"></h1>

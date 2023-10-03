@@ -16,7 +16,7 @@ $perfil = $_SESSION['perfil'];
     <meta name="INJUVENTUD" content="Consejo Juvenil">
     <meta name="" content="">
     <link rel="icon" type="image/png" href="../../img/icon.ico" sizes="22x21">
-    <title>Perfil Admin | Consejo Juvenil</title>
+    <title>Perfil Admin | Debate 2023</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/album/">
 
@@ -91,15 +91,7 @@ $perfil = $_SESSION['perfil'];
         white-space: nowrap;
         -webkit-overflow-scrolling: touch;
       }
-      /* buttons hover */
-
-      /* #botonesFiles:hover {
-    
-        box-shadow: 0 10px 20px rgba(0,0,0,.1), 0 4px 8px rgba(0,0,0,.06);
-        transform: scale(1.03);
-        transition: width 0.8s, height 0.8s, transform 0.3s;
-        
-      } */
+   
       .card{
         box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
       }
@@ -137,18 +129,14 @@ $perfil = $_SESSION['perfil'];
 
 <main>
   <section class="text-center container">
-    <div class="row py-lg-5"  style="background-image: url('../../assets/img/background.jpg');background-position: center;background-repeat: no-repeat;background-size: cover;width:100%;">
+    <div class="row py-lg-5"  style="background-image: url('../../assets/img/background.jpg');background-position: top;background-repeat: no-repeat;background-size: cover;width:100%;">
       <div class="col-lg-6 col-md-8 mx-auto rounded bg-light bg-opacity-50 p-2">
-        <h1 class="fw-light"><img src="../../img/logo_consejo_04.png" alt="" width="360"></h1>
+        <h1 class="fw-light"><img src="../../img/logo_debate.png" alt="" width="360"></h1>
         <h2 class="fw-bold" style="color:#5a5557">Bienvenido</h2>
         <h2 class="fw-bold" style="color:#5a5557"><i class="bi bi-person-circle"></i></h2>
         <h2 class="fw-bold" style="color:#5a5557"><?php echo $nombre ?></h2>
-        <p class="lead text-dark mt-2">Sistema de postulación del INJUVENTUD para integrarse al Consejo Juvenil del Estado de Zacatecas en su edición 2023.</p>
-        <p>
-          <hr class="text-secondary">
-          <a href="#seccion_MX" class="btn btn-danger my-2"><i class="bi bi-flag-fill text-success"></i> Postulantes Mx</a>
-          <a href="#seccion_USA" class="btn btn-primary my-2"><i class="bi bi-flag-fill text-danger"></i> Postulantes USA</a>
-        </p>
+        <p class="lead text-dark mt-2">Sistema de registro para el Concurso Juvenil de Debate en su edición 2023.</p>
+        
       </div>
     </div>
   </section>
@@ -158,19 +146,20 @@ $perfil = $_SESSION['perfil'];
     <nav class="navbar bg-body-tertiary">
       <form class="container-fluid justify-content-start">
         <a href="completados.php" class="btn btn-outline-success me-2" type="button"><i class="bi bi-check-circle-fill"></i> Completados</a>
-        <a href="no_completados.php" class="btn btn-sm btn-outline-danger" type="button"><i class="bi bi-x-circle-fill"></i> No completados</a>
+        <a href="no_completados.php" class="btn btn-sm btn-outline-danger me-2" type="button"><i class="bi bi-x-circle-fill"></i> No completados</a>
+        <a href="index_general.php" class="btn btn-sm btn-outline-primary" type="button"><i class="bi bi-card-list"></i> Lista general</a>
       </form>
     </nav>
       <div class="mb-4">
         <p><span id="seccion_MX"></span>
           <p class="h2">
-          <i class="bi bi-flag-fill text-success"></i> Completados Mx | 
+          <i class="bi bi-flag-fill text-danger"></i> No Completados | 
               <a href="#inicio">
                 <i class="bi bi-arrow-bar-up"></i>
               </a>
           </p>
         </p>
-        <p><small>Postulantes nacidos en <strong>el estado de Zacatecas</strong>.</small></p>
+        <p><small>Participantes.</small></p>
       </div>
       
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
@@ -197,46 +186,6 @@ $perfil = $_SESSION['perfil'];
           </tbody>
         </table>
        
-      </div><!-- row -->
-    </div>
-  </div>
-
-  <div class="album py-5 bg-light">
-    <div class="container">
-      <div class="mb-4">
-        <p><span id="seccion_USA"></span>
-          <p class="h2" >
-          <i class="bi bi-flag-fill text-danger"></i> Postulantes USA | 
-            <a href="#inicio"><i class="bi bi-arrow-bar-up"></i></a></p></p>
-            <p><small>Postulantes Migrantes <strong>de Zacatecas</strong>.</small></p>
-      </div>
-      
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-
-      <div class="input-group mb-3">
-        <span class="input-group-text" id="basic-addon1"><i class="bi bi-search"></i></span>
-        <input type="text" class="form-control" placeholder="Buscar ..." aria-label="Buscar ..." aria-describedby="basic-addon1" id="myInput2">
-      </div>
-       
-      <table class="table">
-          <thead class="text-light text-center" style="background:#b23933">
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">Nombre</th>
-              <th scope="col">CURP</th>
-              <th scope="col">Edad</th>
-              <th scope="col">Teléfono</th>
-              <th scope="col"># Documentos</th>
-            </tr>
-          </thead>
-          <tbody class="text-center" id="myTable2">
-            <?php
-            include('query/lista_postulantes_general_usa_no_completados.php');
-            ?>
-          </tbody>
-        </table>
-     
-
       </div><!-- row -->
     </div>
   </div>

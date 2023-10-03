@@ -33,12 +33,12 @@ while($rowSQL = $resultadoSQL->fetch_assoc()){
             <span class="badge rounded-pill text-bg-danger">
             ';
         }
-        else if ($numero == 1 || $numero == 2 || $numero == 3 || $numero == 4 || $numero == 5 || $numero == 6 || $numero == 7 || $numero == 8){
+        else if ($numero == 1 || $numero == 2){
             echo'
             <span class="badge rounded-pill text-bg-warning">
             ';
         }
-        else if ($numero == 9){
+        else if ($numero == 3){
             echo'
             <span class="badge rounded-pill text-bg-primary">
             ';
@@ -48,7 +48,10 @@ while($rowSQL = $resultadoSQL->fetch_assoc()){
             </span>
             </a>
         </td>
-        <td><a href="calificaciones.php?id='.$rowSQL['id'].'&postulacion=1" type="button" class="btn btn-primary btn-sm">Calificaciones</a></td>
+        ';
+        // echo'
+        // <td><a href="calificaciones.php?id='.$rowSQL['id'].'&postulacion=1" type="button" class="btn btn-primary btn-sm">Calificaciones</a></td>';
+        echo '
     </tr>
 ';
 }
