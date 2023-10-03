@@ -1,0 +1,16 @@
+menu de eventos parallax
+https://www.w3schools.com/howto/howto_css_parallax.asp
+
+https://codepen.io/DuskoStamenic/pen/ZEvBKdw
+https://freefrontend.com/css-parallax/
+https://www.w3schools.com/howto/tryhow_css_parallax_demo.htm
+
+para convocatorias
+https://codepen.io/jakob-e/pen/ELqeRM
+
+Para efectos de cards y diseño
+https://ordinarycoders.com/blog/article/codepen-bootstrap-card-hovers
+https://codepen.io/Corsurath/pen/abbxNpj
+
+Cómo funciona ajax
+https://www.ediciones-eni.com/open/mediabook.aspx?idR=ac361f71f3edf4794614f9be6b0a6b8d
