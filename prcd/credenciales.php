@@ -36,7 +36,7 @@ if($no_resultados == 1){
         $mail->Port = 587;                                    // TCP port to connect to 587 465
         
             //Recipients
-            $mail->setFrom('injuventud@zacatecas.gob.mx', 'CONSEJO JUVENIL - INJUVENTUD');
+            $mail->setFrom('injuventud@zacatecas.gob.mx', 'INJUVENTUD');
             $mail->addAddress($email, $nombre);     // Add a recipient
         
             // Content

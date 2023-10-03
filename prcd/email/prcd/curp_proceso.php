@@ -38,15 +38,6 @@ $row_cnt = $validar->num_rows;
     require 'email/SMTP.php';
     
 
-// if($conn->query($validacion)){
-
-//    echo "<script type=\"text/javascript\">Swal.fire('Usuario ya registrado').then(function(){window.location='index.html';});</script>";
-    
-// } 
-//validar
-
-// if($validar['curp']!==$curp){
-// if(mysqli_num_rows($validar)==0){
 if($row_cnt == 0){
     //codigo aleatorio
     echo "<script type=\"text/javascript\">Swal.fire(
@@ -56,11 +47,7 @@ if($row_cnt == 0){
       ).then(function(){window.location='../index.php';});</script>";
 }
 else{
-    // echo "<script type=\"text/javascript\">Swal.fire('Usuario ya registrado').then(function(){window.location='index.html';});</script>";
-    
    
-    // $row=$validar->fetch_assoc();
-    
     $usuario=$row['usuario'];
     $pwd=$row['pwd'];
     $nombre=$row['nombre'];
@@ -73,7 +60,6 @@ try {
     //Server settings
     $mail->SMTPDebug = 0;                                       // Enable verbose debug output
     $mail->isSMTP();                                            // Set mailer to use SMTP
-    //$mail->Host       = 'smtp.gmail.com';  // Specify main and backup SMTP servers
     $mail->Host       = 'smtp.correoexchange.com.mx';  // Specify main and backup SMTP servers
     $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
     $mail->Username   = 'injuventud@zacatecas.gob.mx';                     // SMTP username
@@ -82,22 +68,14 @@ try {
     $mail->Port       = 587;                                    // TCP port to connect to
 
     //Recipients
-    $mail->setFrom('injuventud@zacatecas.gob.mx', 'PEJ2022 - INJUVENTUD');
+    $mail->setFrom('injuventud@zacatecas.gob.mx', 'INJUVENTUD');
     $mail->addAddress($email, $nombre);     // Add a recipient
-    // $mail->addAddress('ellen@example.com');               // Name is optional
-    // $mail->addReplyTo('info@example.com', 'Information');
-    // $mail->addCC('tecnologias.injuventud@gmail.com');
-    // $mail->addBCC('bcc@example.com');
-
-    // Attachments
-    // $mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
-    // $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
 
     // Content
     $mail->isHTML(true);
     $mail->CharSet = 'UTF-8';                                  // Set email format to HTML
     $mail->Subject = 'Recuperar datos de usuario';
-    $mail->Body    = 'Este mensaje es para recuperar tus datos de acceso a la plataforma del <b>Premio Estatal de la Juventud</b>.<br><br>Usuario: '.$usuario.'<br>Contraseña: '.$pwd.'';
+    $mail->Body    = 'Este mensaje es para recuperar tus datos de acceso a la plataforma del <b>Concurso Juvenil de Debate 2023</b>.<br><br>Usuario: '.$usuario.'<br>Contraseña: '.$pwd.'';
     $mail->AltBody = 'Mensaje para recuperar acceso';
 
     $mail->send();

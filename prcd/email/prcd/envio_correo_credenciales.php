@@ -17,8 +17,6 @@ $curp = $_POST['usuario'];
 $sql = "SELECT * FROM usr WHERE usuario = '$curp'";
 $resultado= $conn->query($sql);
 
-
-
 if($resultado){
 
     echo "<script type=\"text/javascript\">Swal.fire(
