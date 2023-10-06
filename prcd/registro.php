@@ -10,6 +10,9 @@ require('conn/qc.php');
    
     $nombre = $_POST['nombre'];
     $telefono = $_POST['telefono'];
+    $domicilio = $_POST['domicilio'];
+    $escuela = $_POST['escuela'];
+    $gradoEstudio = $_POST['gradoEstudio'];
     $municipio = $_POST['municipio'];
     $curp = $_POST['curp'];
     $edad = $_POST['edad'];
@@ -25,7 +28,11 @@ require('conn/qc.php');
         curp,
         edad,
         pwd,
-        perfil)
+        perfil,
+        domicilio,
+        escuela,
+        gradoEstudio
+        )
         VALUES(
             '$email',
             '$nombre',
@@ -34,7 +41,10 @@ require('conn/qc.php');
             '$curp',
             '$edad',
             '$pwd',
-            '$perfil'
+            '$perfil',
+            '$domicilio',
+            '$escuela',
+            '$gradoEstudio'
             )
         ";
         // email

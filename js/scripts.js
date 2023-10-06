@@ -224,19 +224,22 @@ $(document).ready(function() {
     $('#registroMX').submit(function(e) {
         document.getElementById('boton_submit').hidden = true;
         var nombre = document.getElementById('nombre').value;
+        var telefono = document.getElementById('telefono').value;
+        var domicilio = document.getElementById('domicilio').value;
+        var escuela = document.getElementById('escuela').value;
+        var gradoEstudio = document.getElementById('gradoEstudio').value;
         var municipio = document.getElementById('municipio').value;
         var curp = document.getElementById('curp').value;
         var edad = document.getElementById('edad').value;
         var email = document.getElementById('email').value;
         var pwd = document.getElementById('pwd').value;
-        var telefono = document.getElementById('telefono').value;
 
         // sweetalert
         let timerInterval
         Swal.fire({
         title: 'Espere un momento',
         html: 'Sus datos se están registrando en la plataforma.',
-        timer: 2500,
+        timer: 4000,
         timerProgressBar: true,
         didOpen: () => {
             Swal.showLoading()
@@ -260,7 +263,6 @@ $(document).ready(function() {
             type: "POST",
             url: 'prcd/registro.php',
             dataType:'json',
-            // data: $(this).serialize(),
             data:{
                 nombre:nombre,
                 municipio:municipio,
@@ -268,7 +270,10 @@ $(document).ready(function() {
                 edad:edad,
                 email:email,
                 pwd:pwd,
-                telefono:telefono
+                telefono:telefono,
+                domicilio:domicilio,
+                escuela:escuela,
+                gradoEstudio:gradoEstudio
             },
             success: function(response)
             {
@@ -278,7 +283,6 @@ $(document).ready(function() {
                 // let's redirect
                 if (jsonData.success == "1")
                 {
-                    // location.href = 'my_profile.php';
                     Swal.fire({
                         icon: 'success',
                         imageUrl: 'img/logo_debate.png',
@@ -291,7 +295,6 @@ $(document).ready(function() {
                 }
                 else
                 {
-                    // alert('Invalid Credentials!');
                     Swal.fire({
                         icon: 'error',
                         title: 'Datos incorrectos',
@@ -299,7 +302,7 @@ $(document).ready(function() {
                         confirmButtonColor: '#3085d6',
                         footer: 'INJUVENTUD'
                     }).then(function(){window.location='index.html';});
-                    // });
+                  
                 }
            }
        });
