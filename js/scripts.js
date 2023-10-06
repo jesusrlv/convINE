@@ -426,3 +426,14 @@ function bloquearMDS(){
             }
     });
 }
+
+function cambioBoton(){
+    var checkBtn = document.getElementById('flexCheckDefault');
+    var submitBtn = document.getElementById('boton_submit');
+    if (checkBtn.checked){
+        submitBtn.disabled = false;
+    }
+    else{
+        submitBtn.disabled = true;
+    }
+}

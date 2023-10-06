@@ -217,6 +217,7 @@
         </div>
         <p><span class="text-dark">Verificación</span>
             <div id="result-username" class="mb-0 g-0" style="margin-bottom:-3px">
+              
               <div class="alert alert-secondary text-start"><strong><i class="bi bi-arrow-right-circle-fill"></i> CURP.</strong> Se verificará tu CURP.</div>
             </div></p><!-- valida curp -->
             <p><div id="result-username2">
@@ -225,11 +226,21 @@
             <p><div id="result-username3">
               <div class="alert alert-secondary text-start"><strong><i class="bi bi-arrow-right-circle-fill"></i> EDAD.</strong> Se verificará tu edad (12-29 años).</div>
             </div></p><!-- valida usr -->
+            <hr>
+            <div class="alert alert-primary text-start">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" onchange="cambioBoton()">
+                <label class="form-check-label text-dark text-start" for="flexCheckDefault">
+                  Declaro bajo protesta de decir verdad que al momento de solicitar mi inscripción al Concurso de Debate Juvenil 2023 tengo residencia en el Estado de Zacatecas.
+                </label>
+              </div>
+            </div>
                 
       </div>
+      
       <div class="modal-footer bg-light">
         <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal"><i class="bi bi-x-circle-fill"></i> Cerrar</button>
-        <button type="submit" class="btn btn-outline-primary" id="boton_submit" hidden><i class="bi bi-plus-circle-fill"></i> Registrarse</button>
+        <button type="submit" class="btn btn-outline-primary" id="boton_submit" disabled hidden><i class="bi bi-plus-circle-fill"></i> Registrarse</button>
       </form>
       </div>
     </div>
