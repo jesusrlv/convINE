@@ -179,10 +179,10 @@ $perfil = $_SESSION['perfil'];
         <div class="col">
           <div class="card border-light" style="height:300px">
             <div class="card-body">
-              <h5 class="card-title">Convocatoria</h5>
-              <h6 class="card-subtitle mb-2 text-muted"><i class="bi bi-exclamation-triangle-fill text-warning"></i> Convocatoria vigente</h6>
-              <p class="card-text">Convocatoria vigente acerca de la postulación al Concurso de Debate Juvenil 2023.</p>
-              <p><a href="https://docs.google.com/document/d/1RzrM_XVMFHdyl077Tr-f3MDMfIl-CofL/edit?usp=sharing&ouid=110177786885321579068&rtpof=true&sd=true" target="_blank">Cartas (documentos)</a></p>
+              <h5 class="card-title">Documentos</h5>
+              <h6 class="card-subtitle mb-2 text-muted"><i class="bi bi-exclamation-triangle-fill text-warning"></i> Documentación PDF</h6>
+              <p class="card-text">Cesión de derechos para el Concurso de Debate Juvenil 2023.</p>
+              <p><a href="docs/formatos.pdf" target="_blank"><i class="bi bi-cloud-arrow-down-fill"></i> Descarga de documentos</a></p>
               
             </div>
             <div class="card-footer">
