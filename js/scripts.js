@@ -31,7 +31,8 @@
         document.getElementById("edad").value = edad;
 
         var cumplidos = document.getElementById("edad").value;
-        if ( cumplidos < 12 || cumplidos > 29 ){
+        // if ( cumplidos < 12 || cumplidos > 29 ){
+        if ( cumplidos < 15 || cumplidos > 29 ){
             document.getElementById("result-username3").innerHTML = '<div class="alert alert-danger text-start"><strong><i class="bi bi-x-circle-fill"></i> ERROR.</strong> Tu edad no está permitida en la convocatoria.</div><style>#boton_submit{display:none;}</style>';
         }
         else{
