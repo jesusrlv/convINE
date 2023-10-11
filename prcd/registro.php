@@ -47,6 +47,11 @@ require('conn/qc.php');
             '$gradoEstudio'
             )
         ";
+
+        $resultado_sql = $conn->query($sql);
+        if($resultado_sql){
+        echo json_encode(array('success' => 1));
+        
         // email
         $mail = new PHPMailer(true);
 
@@ -90,9 +95,9 @@ require('conn/qc.php');
            
             Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
         }  
-    $resultado_sql = $conn->query($sql);
-    if($resultado_sql){
-        echo json_encode(array('success' => 1));
+    // $resultado_sql = $conn->query($sql);
+    // if($resultado_sql){
+    //     echo json_encode(array('success' => 1));
         
     }
     else{
